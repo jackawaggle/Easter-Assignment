@@ -1,0 +1,154 @@
+package EasterAssignment;
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JTextPane;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JButton;
+
+public class Commuting1 extends JFrame {
+	private JPanel contentPane;
+	private JTextField luastxt;
+	private JTextField cartxt;
+	private JTextField bustxt;
+	private JTextField bicycletxt;
+	private JTextField walktxt;
+	private JTextField textField_luas;
+	private JTextField textField_car;
+	private JTextField textField_bus;
+	private JTextField textField_bike;
+	private JTextField textField_walk;
+	private JButton btnNewbie;
+	
+	
+	
+	
+	
+	public Commuting1() {
+		getContentPane().setLayout(null);
+		
+		JLabel lblLuas = new JLabel("Commute by Luas");
+		lblLuas.setBounds(26, 42, 116, 14);
+		getContentPane().add(lblLuas);
+		textField_luas = new JTextField();
+		textField_luas.setBounds(193, 39, 86, 20);
+		getContentPane().add(textField_luas);
+		textField_luas.setColumns(10);
+		
+		JLabel lblCommuteByCar = new JLabel("Commute By Car");
+		lblCommuteByCar.setBounds(26, 74, 86, 14);
+		getContentPane().add(lblCommuteByCar);
+		textField_car = new JTextField();
+		textField_car.setColumns(10);
+		textField_car.setBounds(193, 71, 86, 20);
+		getContentPane().add(textField_car);
+		
+		JLabel lblCommuteByBus = new JLabel("Commute By Bus");
+		lblCommuteByBus.setBounds(26, 113, 86, 14);
+		getContentPane().add(lblCommuteByBus);
+		textField_bus = new JTextField();
+		textField_bus.setColumns(10);
+		textField_bus.setBounds(193, 110, 86, 20);
+		getContentPane().add(textField_bus);
+		
+		
+		
+		
+		
+		JLabel lblCommuteByBike = new JLabel("Commute By Bicycle");
+		lblCommuteByBike.setBounds(26, 152, 116, 14);
+		getContentPane().add(lblCommuteByBike);
+		textField_bike = new JTextField();
+		textField_bike.setColumns(10);
+		textField_bike.setBounds(193, 149, 86, 20);
+		getContentPane().add(textField_bike);
+		
+		
+		JLabel lblCommuteByWalking = new JLabel("Commute By Walking");
+		lblCommuteByWalking.setBounds(26, 192, 116, 14);
+		getContentPane().add(lblCommuteByWalking);
+		
+		textField_walk = new JTextField();
+		textField_walk.setColumns(10);
+		textField_walk.setBounds(193, 189, 86, 20);
+		getContentPane().add(textField_walk);
+		
+		
+		btnNewbie = new JButton("Evaluate");
+		btnNewbie.setBounds(190, 238, 89, 23);
+		getContentPane().add(btnNewbie);
+		
+		
+		JTextPane textPane = new JTextPane();
+		textPane.setBounds(0, 0, 6, 20);
+		getContentPane().add(textPane);
+	}
+	
+/**
+ * Launch the application.
+ */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Commuting1 frame = new Commuting1();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+
+	/**
+	 * Create the frame.
+	 */
+	public void Commuting() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBackground(new Color(255, 255, 255));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Commute By Luas");
+		lblNewLabel.setBounds(28, 47, 98, 14);
+		contentPane.add(lblNewLabel);
+		
+		luastxt = new JTextField();
+		luastxt.setBounds(136, 41, 86, 20);
+		luastxt.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+			}
+		});
+		contentPane.add(luastxt);
+		luastxt.setColumns(10);
+
+		
+		
+		JButton btnNewbie = new JButton("Evaluate");
+		btnNewbie.setBounds(109, 227, 89, 23);
+		btnNewbie.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(null, "Evaluation shows the amount of time you spend commuting is...");
+				
+			}
+		});
+		contentPane.add(btnNewbie);
+		
+		{	
+		}
+	}
+}
+		
